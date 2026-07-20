@@ -1,0 +1,1094 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason John Colbert | SEO Executive & Organic Growth Specialist</title>
+    
+    <!-- Google Fonts: Poppins for headings, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CORE VARIABLES --- */
+        :root {
+            --bg-base: #09090b;
+            --bg-card: #18181b;
+            --bg-hover: #27272a;
+            --text-main: #f4f4f5;
+            --text-muted: #a1a1aa;
+            --primary: #38bdf8; /* Neon Sky Blue */
+            --primary-glow: rgba(56, 189, 248, 0.4);
+            --secondary: #818cf8; /* Indigo */
+            --border: #3f3f46;
+            --transition: all 0.3s ease;
+        }
+
+        /* --- RESET & TYPOGRAPHY --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            color: var(--text-main); 
+            background-color: var(--bg-base); 
+            line-height: 1.6; 
+            overflow-x: hidden;
+            position: relative;
+            padding-top: 90px; /* Space for fixed navbar */
+        }
+        
+        h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
+        a { text-decoration: none; color: var(--text-main); transition: var(--transition); }
+        
+        /* --- BACKGROUND GLOW EFFECTS --- */
+        .ambient-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: 
+                radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.05), transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(129, 140, 248, 0.05), transparent 40%),
+                radial-gradient(circle at 50% 80%, rgba(56, 189, 248, 0.03), transparent 50%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+        
+        .section-title { 
+            font-size: 2.5rem; 
+            margin-bottom: 1rem; 
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            max-width: 600px;
+        }
+
+        /* --- FROZEN / STICKY NAVBAR --- */
+        header-nav-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(9, 9, 11, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+        }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 800; letter-spacing: 1px; }
+        .logo span { color: var(--primary); }
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { font-size: 0.9rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); }
+        .nav-links a:hover { color: var(--primary); }
+        
+        .btn {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px var(--primary-glow);
+            transition: var(--transition);
+            display: inline-block;
+        }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px var(--primary-glow); }
+
+        /* --- HERO SECTION --- */
+        .hero { 
+            min-height: 80vh; 
+            display: grid; 
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center; 
+            padding-bottom: 4rem;
+        }
+        .hero-content { max-width: 600px; }
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        .hero h1 { 
+            font-size: clamp(3rem, 5vw, 4.5rem); 
+            line-height: 1.1; 
+            margin-bottom: 1.5rem; 
+        }
+
+        .gradient-text{
+            background: linear-gradient(135deg,#38bdf8,#7dd3fc,#818cf8);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            background-clip:text;
+            color:transparent;
+            text-shadow:0 0 18px rgba(56,189,248,.25);
+        }
+        .hero p { 
+            font-size: 1.15rem; 
+            color: var(--text-muted); 
+            margin-bottom: 2.5rem; 
+        }
+        
+        .hero-image-wrapper {
+            position: relative;
+            width: 420px;
+            height: 560px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 50px rgba(56,189,248,.15);
+            margin: auto;
+        }
+        .hero-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            filter: none;
+            transition: transform .5s ease;
+        }
+        .hero-image-wrapper:hover img { transform: scale(1.05); }
+
+        /* --- METRICS DASHBOARD --- */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 10;
+        }
+        .metric-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .metric-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 20px var(--primary-glow);
+        }
+        .metric-icon {
+            width: 50px; height: 50px;
+            background: rgba(56, 189, 248, 0.1);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        .metric-value { font-size: 2.5rem; font-family: 'Poppins'; font-weight: 700; line-height: 1; margin-bottom: 0.5rem; }
+        .metric-label { color: var(--primary); font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;}
+        .metric-desc { font-size: 0.9rem; color: var(--text-muted); }
+
+        /* --- SKILLS SLIDER SECTION --- */
+         .skills-slider-section {
+            padding: 30px 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .skills-slider-container {
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) var(--border);
+            padding-bottom: 2rem;
+        }
+        .skills-slider-container::-webkit-scrollbar { height: 8px; }
+        .skills-slider-container::-webkit-scrollbar-track { background: var(--bg-card); border-radius: 4px; }
+        .skills-slider-container::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
+        .skill-slide-card {
+            flex: 0 0 350px;
+            scroll-snap-align: start;
+            background: linear-gradient(145deg, var(--bg-card), #121214);
+            border: 1px solid var(--border);
+            padding: 2.5rem;
+            border-radius: 16px;
+            transition: var(--transition);
+        }
+        .skill-slide-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4), 0 0 15px var(--primary-glow);
+        }
+        .skill-slide-card h3 { font-size: 1.4rem; margin-bottom: 1rem; color: var(--text-main); display: flex; align-items: center; gap: 10px; }
+        .skill-slide-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.5; }
+        .slider-instruction { text-align: right; font-size: 0.85rem; color: var(--primary); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* --- INDUSTRY REACH GRID --- */
+        .industry-reach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .industry-item-card {
+            background: linear-gradient(145deg, var(--bg-card), #121214);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .industry-item-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            opacity: 0;
+            transition: var(--transition);
+        }
+        .industry-item-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5), 0 0 20px var(--primary-glow);
+        }
+        .industry-item-card:hover::before { opacity: 1; }
+        
+        .industry-image-wrapper {
+            width: 100%;
+            height: 140px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 1.2rem;
+            border: 1px solid var(--border);
+        }
+        .industry-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.85) contrast(1.1);
+            transition: transform 0.5s ease;
+        }
+        .industry-item-card:hover .industry-image-wrapper img {
+            transform: scale(1.05);
+            filter: brightness(1) contrast(1.1);
+        }
+        .industry-item-card h3 { font-size: 1.3rem; margin-bottom: 0.4rem; color: var(--text-main); }
+        .industry-item-card p { color: var(--text-muted); font-size: 0.9rem; }
+
+        /* --- PAGE TOGGLE VIEWS --- */
+        .site-page { display: none; }
+        .site-page.active { display: block; }
+
+        /* --- DETAILED CASE STUDY STYLES --- */
+        .case-study-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 4rem 3rem;
+            margin-bottom: 80px;
+        }
+        .case-study-header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        .case-study-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            background: var(--bg-base);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin-top: 1.5rem;
+        }
+        .meta-item span { display: block; font-size: 0.8rem; text-transform: uppercase; color: var(--primary); letter-spacing: 1px; margin-bottom: 0.3rem; font-weight: 600; }
+        .meta-item strong { font-size: 1rem; color: var(--text-main); }
+
+        .case-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        .case-block {
+            background: var(--bg-base);
+            border: 1px solid var(--border);
+            padding: 2.5rem;
+            border-radius: 16px;
+        }
+        .case-block h4 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .case-block ul { list-style: none; }
+        .case-block li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        .case-block li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+        
+        .phases-container { margin-top: 3rem; }
+        .phases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .phase-card {
+            background: var(--bg-base);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+        .phase-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .phase-card h5 { color: var(--primary); font-size: 1.05rem; margin-bottom: 0.8rem; }
+        .phase-card p { color: var(--text-muted); font-size: 0.9rem; }
+
+        .results-box {
+            background: linear-gradient(145deg, rgba(56, 189, 248, 0.05), rgba(129, 140, 248, 0.05));
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        /* --- EXPERIENCE TIMELINE --- */
+         .experience-section { padding: 30px 0; position: relative; }
+        .timeline { border-left: 2px solid var(--border); padding-left: 3rem; margin-left: 1rem; }
+        .timeline-item { position: relative; margin-bottom: 4rem; }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.4rem;
+            top: 0;
+            width: 16px; height: 16px;
+            background: var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--primary-glow);
+        }
+        .time-date { color: var(--primary); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem; letter-spacing: 1px; text-transform: uppercase;}
+        .time-title { font-size: 1.5rem; margin-bottom: 0.2rem; }
+        .time-company { font-size: 1.1rem; color: #d4d4d8; margin-bottom: 1rem; font-weight: 500;}
+        .time-desc { color: var(--text-muted); font-size: 0.95rem; max-width: 800px; line-height: 1.7;}
+        .time-desc ul { margin-left: 1.2rem; margin-top: 0.5rem; }
+        .time-desc li { margin-bottom: 0.5rem; }
+
+        /* --- EXPERTISE & SERVICES --- */
+         .expertise-section { padding: 40px 0; }
+        .tag-wrap { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-tag { 
+            background: rgba(255,255,255,0.05); 
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 8px 16px; 
+            border-radius: 20px; 
+            font-size: 0.9rem; 
+            color: #d4d4d8;
+        }
+
+        /* --- MID-PAGE CTA BANNER --- */
+        .cta-banner {
+            background: linear-gradient(145deg, rgba(56, 189, 248, 0.08), rgba(129, 140, 248, 0.08));
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 16px;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin: 80px 0;
+            box-shadow: 0 0 40px rgba(56, 189, 248, 0.1);
+        }
+        .cta-banner h2 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--text-main); }
+        .cta-banner p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+        /* --- SPLIT SECTIONS --- */
+         .split-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            padding: 40px 0;
+        }
+        .split-text h3 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--text-main); }
+        .split-text p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.05rem; }
+        .split-text ul { list-style: none; margin-bottom: 2rem; }
+        .split-text li { position: relative; padding-left: 2rem; margin-bottom: 1rem; color: var(--text-muted); }
+        .split-text li::before { content: '→'; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
+        .split-image {
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border: 1px solid var(--border);
+        }
+        .split-image img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.8) contrast(1.1); transition: transform 0.5s ease; }
+        .split-image:hover img { transform: scale(1.03); filter: brightness(1) contrast(1.1); }
+
+        /* --- CERTS GRID --- */
+        .certs-grid { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 1rem; }
+        .cert-badge { display: flex; align-items: center; gap: 8px; background: var(--bg-card); border: 1px solid var(--border); padding: 8px 15px; border-radius: 8px; font-size: 0.9rem; color: var(--text-main); }
+
+        /* --- BOTTOM CONTACT SECTION --- */
+        .contact-section { padding: 100px 0; text-align: center; }
+        .contact-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        .contact-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            min-width: 320px;
+            transition: var(--transition);
+        }
+        .contact-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+        .contact-card h3 { color: var(--primary); margin-bottom: 0.5rem; font-size: 1.5rem; }
+        .contact-card p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem; }
+        .contact-card a { font-size: 1.15rem; font-weight: 500; color: var(--text-main); transition: var(--transition); }
+        .contact-card a:hover { color: var(--primary); text-decoration: underline; }
+
+        /* --- FOOTER --- */
+        footer { padding: 40px 0; text-align: center; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem; margin-top: 50px; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 992px) {
+            .hero { grid-template-columns: 1fr; text-align: center; }
+            .hero-content { margin: 0 auto; }
+            .hero-image-wrapper { max-width: 400px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 16px; }
+            .metrics-grid { grid-template-columns: 1fr; margin-top: 0; }
+            .case-grid-2 { grid-template-columns: 1fr; }
+            .split-section { grid-template-columns: 1fr; gap: 3rem; }
+            .split-image { order: -1; }
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+            .timeline { padding-left: 1.5rem; margin-left: 0.5rem; }
+            .timeline-item::before { left: -1.9rem; }
+            .section-title { font-size: 2rem; }
+            .cta-banner { padding: 3rem 1.5rem; }
+            .cta-banner h2 { font-size: 2rem; }
+            .case-study-section { padding: 2rem 1.5rem; }
+
+            nav{padding:0.8rem 4%;}
+            .logo{font-size:1rem;max-width:130px;line-height:1.2;}
+            .btn{padding:.55rem .9rem;font-size:.75rem;}
+            .hero-badge{display:inline-block;font-size:.75rem;padding:.45rem .9rem;margin-bottom:1rem;}
+            .hero-image-wrapper{
+                width:100%;
+                max-width:300px;
+                height:400px;
+                aspect-ratio:auto;
+                margin:2rem auto 0;
+            }
+            .hero-content>div:last-child{
+                justify-content:center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ambient Glowing Background -->
+    <div class="ambient-bg"></div>
+
+    <!-- FROZEN / STICKY NAVBAR WRAPPER -->
+    <header-nav-wrapper>
+        <nav>
+            <div class="logo">JASON JOHN COLBERT<span>.</span></div>
+            <div class="nav-links">
+                <a href="#home" onclick="switchPage('home'); return false;" id="nav-home-link" style="color: var(--primary);">Home</a>
+                <a href="#case-studies" onclick="switchPage('case-studies'); return false;" id="nav-case-link">Case Studies</a>
+                <a href="#contact" onclick="switchPage('home'); location.hash='#contact'; return false;">Contact</a>
+            </div>
+            <a href="https://www.linkedin.com/in/jason-john-colbert/" target="_blank" class="btn">Connect on LinkedIn</a>
+        </nav>
+    </header-nav-wrapper>
+
+    <div class="container">
+
+        <!-- ==================== HOME PAGE VIEW ==================== -->
+        <div id="page-home" class="site-page active">
+            <!-- HERO SECTION -->
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="hero-badge">2.5 Years Experience</div>
+                    <h1>
+                        SEO <span class="gradient-text">Specialist</span><br>
+                        Engineering<br>
+                        <span class="gradient-text">Search</span> Visibility.
+                    </h1>
+                    <p>I am Jason John Colbert. I am a highly analytical, performance-driven SEO Specialist leveraging technical expertise and data-driven strategies to deliver scalable organic growth and measurable business impact.</p>
+                    <div style="display: flex; gap: 15px; margin-top: 1rem; flex-wrap: wrap;">
+                        <a href="#impact" class="btn">View Key Achievements</a>
+                        <a href="javascript:void(0)" onclick="switchPage('case-studies')" class="btn" style="background: transparent; border: 1px solid var(--primary); box-shadow: none;">Read Case Studies</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="photo.jpg.jpg" alt="Jason John Colbert">
+                </div>
+            </section>
+
+            <!-- DASHBOARD METRICS -->
+            <section id="impact">
+                <h2 class="section-title">Measurable Impact</h2>
+                <p class="section-subtitle">Transforming data into targeted traffic and sustainable domain authority.</p>
+                
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                        </div>
+                        <div class="metric-value">90X</div>
+                        <div class="metric-label">Traffic Scaling</div>
+                        <div class="metric-desc">Scaled a new Kenya-based website from under 100 organic users to ~9,000 monthly users.</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <div class="metric-value">Page 1</div>
+                        <div class="metric-label">Keyword Dominance</div>
+                        <div class="metric-desc">Engineered strategies to push multiple high-intent keywords from Page 6-7 directly to Page 1 on Google SERPs.</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <div class="metric-value">Stable</div>
+                        <div class="metric-label">Algorithmic Resilience</div>
+                        <div class="metric-desc">Maintained traffic volume and keyword ranking stability across multiple accounts during major Google algorithm updates.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== SKILLS SLIDER SECTION ==================== -->
+            <section id="skills-slider" class="skills-slider-section">
+                <h2 class="section-title">Core Skills by Category</h2>
+                <p class="section-subtitle">Comprehensive breakdown of technical proficiencies, tools, and strategic capabilities.</p>
+                <div class="slider-instruction">← Scroll Horizontally →</div>
+                
+                <div class="skills-slider-container">
+                    <!-- Slide 1: Technical SEO -->
+                    <div class="skill-slide-card">
+                        <h3>⚙️ Technical SEO</h3>
+                        <p>Core infrastructure, crawl health, and performance optimizations.</p>
+                        <div class="tag-wrap">
+                            <span class="skill-tag">Technical SEO</span>
+                            <span class="skill-tag">Crawl & Indexing Optimization</span>
+                            <span class="skill-tag">Core Web Vitals</span>
+                            <span class="skill-tag">Page Speed & Mobile Usability</span>
+                            <span class="skill-tag">Mobile Technical Optimisation</span>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: On-Page & Architecture -->
+                    <div class="skill-slide-card">
+                        <h3>✍️ On-Page & Architecture</h3>
+                        <p>Structuring content and metadata for search engine clarity and user intent.</p>
+                        <div class="tag-wrap">
+                            <span class="skill-tag">On-Page Optimization</span>
+                            <span class="skill-tag">Internal Linking & URL Architecture</span>
+                            <span class="skill-tag">Metadata & Header Hierarchies</span>
+                            <span class="skill-tag">Search Intent Optimization</span>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Advanced Optimization -->
+                    <div class="skill-slide-card">
+                        <h3>🚀 Advanced Optimization</h3>
+                        <p>Future-proofing visibility via next-gen search paradigms and authority building.</p>
+                        <div class="tag-wrap">
+                            <span class="skill-tag">Link Building</span>
+                            <span class="skill-tag">AEO (Answer Engine Optimization)</span>
+                            <span class="skill-tag">GEO (Generative Engine Optimization)</span>
+                            <span class="skill-tag">Google Business Profile (GBP)</span>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Tools & Platforms -->
+                    <div class="skill-slide-card">
+                        <h3>🛠️ Tools & Platforms</h3>
+                        <p>Industry-standard data analytics and search console suites.</p>
+                        <div class="tag-wrap">
+                            <span class="skill-tag">Google Analytics 4 (GA4)</span>
+                            <span class="skill-tag">Google Search Console</span>
+                            <span class="skill-tag">SEMrush</span>
+                            <span class="skill-tag">Ubersuggest</span>
+                            <span class="skill-tag">Ahref</span>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5: CMS & Execution -->
+                    <div class="skill-slide-card">
+                        <h3>💻 CMS & Execution</h3>
+                        <p>Direct code implementation and stakeholder collaboration.</p>
+                        <div class="tag-wrap">
+                            <span class="skill-tag">WordPress</span>
+                            <span class="skill-tag">Visual Studio Code</span>
+                            <span class="skill-tag">Performance Reporting</span>
+                            <span class="skill-tag">Client Communication</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EXPERIENCE TIMELINE -->
+            <section id="experience" class="experience-section">
+                <h2 class="section-title" style="text-align: left;">Professional Journey</h2>
+                
+                <div class="timeline" style="margin-top: 3rem;">
+                    <!-- Role 1: Catalysts -->
+                    <div class="timeline-item">
+                        <div class="time-date">JUNE 2026 – PRESENT</div>
+                        <h3 class="time-title">Digital Marketing Analyst</h3>
+                        <div class="time-company">Catalysts</div>
+                        <div class="time-desc">
+                            <ul>
+                                <li>Driving organic growth through precise data analysis and long-term search strategy.</li>
+                                <li>Identifying unique growth opportunities that fundamentally enhance online visibility, user engagement, and overarching business performance.</li>
+                                <li>Focusing on advanced SEO methodologies including meticulous keyword research, technical audits, content strategy, website optimization, AEO, GEO, and executive report preparation.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Role 2: Digital Corsel -->
+                    <div class="timeline-item">
+                        <div class="time-date">FEB 2024 – MAY 2026</div>
+                        <h3 class="time-title">SEO Executive</h3>
+                        <div class="time-company">Digital Corsel, Bangalore</div>
+                        <div class="time-desc">
+                            <ul>
+                                <li>Orchestrate 5+ concurrent SEO projects, overseeing end-to-end strategy, technical execution, and performance tracking to deliver measurable organic growth.</li>
+                                <li>Execute comprehensive technical SEO audits, resolving critical crawl errors, indexing issues, and core web vitals (page speed and mobile usability) to enhance site health.</li>
+                                <li>Implement advanced on-page SEO, optimizing metadata, header hierarchies, and URL structures to secure top-tier keyword rankings across diverse industries.</li>
+                                <li>Develop direct technical implementations via WordPress and PHP; utilized Visual Studio Code to modify source files and streamline deployment without developer intervention.</li>
+                                <li>Drive Local SEO and GMB (Google Business Profile) optimization for niche sectors, including Healthcare, Education, and Real Estate, increasing local search visibility.</li>
+                                <li>Engineer intent-driven SEO strategies aligned with E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) and industry compliance to increase domain authority.</li>
+                                <li>Manage client relationships as the primary point of contact, leading strategy consultations, performance reporting, and stakeholder expectation management.</li>
+                                <li>Analyze SEO performance metrics using Google Search Console (GSC), GA4, UberSuggest and SEMrush to provide actionable data insights and monthly ROI reporting.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== INDUSTRY REACH ==================== -->
+            <section id="industry-reach" class="expertise-section">
+                <h2 class="section-title">Industry Reach</h2>
+                <p class="section-subtitle">Orchestrating specialized campaigns across competitive commercial verticals.</p>
+                
+                <div class="industry-reach-grid">
+                    <!-- Healthcare -->
+                    <div class="industry-item-card">
+                        <div class="industry-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80" alt="Healthcare SEO">
+                        </div>
+                        <h3>Healthcare</h3>
+                        <p>E-E-A-T compliant medical authority & local map pack optimization.</p>
+                    </div>
+
+                    <!-- Real Estate -->
+                    <div class="industry-item-card">
+                        <div class="industry-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80" alt="Real Estate SEO">
+                        </div>
+                        <h3>Real Estate</h3>
+                        <p>High-intent property keyword mapping & localized landing page structures.</p>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="industry-item-card">
+                        <div class="industry-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="Education SEO">
+                        </div>
+                        <h3>Education</h3>
+                        <p>Informational content scaling & institutional student acquisition funnels.</p>
+                    </div>
+
+                    <!-- Astrology -->
+                    <div class="industry-item-card">
+                        <div class="industry-image-wrapper">
+                            <img src="astrology.png" alt="Astrology SEO">
+                        </div>
+                        <h3>Astrology</h3>
+                        <p>High-volume organic search optimization & programmatic content strategies.</p>
+                    </div>
+
+                    <!-- Manufacturing -->
+                    <div class="industry-item-card">
+                        <div class="industry-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Manufacturing SEO">
+                        </div>
+                        <h3>Manufacturing</h3>
+                        <p>B2B technical specification search targeting & industrial global visibility.</p>
+                    </div>
+
+                    <!-- Service Based -->
+                    <div class="industry-item-card">
+                        <div class="industry-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Service Based SEO">
+                        </div>
+                        <h3>Service Based</h3>
+                        <p>Lead generation optimization & local service area coverage scaling.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MID-PAGE CTA BANNER -->
+            <section class="cta-banner">
+                <h2>Ready to Scale Your Organic Traffic?</h2>
+                <p>Let's build a data-driven SEO strategy that elevates your search visibility and converts clicks into clients.</p>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <a href="#contact" class="btn">Let's Talk Growth</a>
+                    <a href="javascript:void(0)" onclick="switchPage('case-studies')" class="btn" style="background: transparent; border: 1px solid var(--primary); box-shadow: none;">View Case Studies</a>
+                </div>
+            </section>
+
+            <!-- SPLIT SECTION 1 -->
+            <section id="strategy" class="split-section">
+                <div class="split-text">
+                    <h3>Website Core Page & Blog Optimization</h3>
+                    <p>Content is only as good as its architecture. I specialize in aligning website landing pages, core service pages, and comprehensive blogs with exact user search intent.</p>
+                    <ul>
+                        <li><strong>E-E-A-T Compliance:</strong> Engineering intent-driven SEO strategies aligned with Google's guidelines to increase domain authority.</li>
+                        <li><strong>Metadata & Hierarchy:</strong> Executing advanced on-page SEO by optimizing meta titles, descriptions, and header hierarchies.</li>
+                        <li><strong>AEO & GEO:</strong> Future-proofing content via Answer Engine Optimization and Generative Engine Optimization for AI search.</li>
+                        <li><strong>Internal Linking:</strong> Building strategic URL architectures and robust internal linking frameworks.</li>
+                    </ul>
+                </div>
+                <div class="split-image">
+                    <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=800&q=80" alt="Content and Blog Optimization Strategy">
+                </div>
+            </section>
+
+            <!-- SPLIT SECTION 2 -->
+            <section class="split-section">
+                <div class="split-image">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Technical SEO and Code Modification">
+                </div>
+                <div class="split-text">
+                    <h3>Technical SEO & Local Domination</h3>
+                    <p>I eliminate developer bottlenecks by handling direct technical implementations focused on crawlability, rapid indexing, and local visibility.</p>
+                    <ul>
+                        <li><strong>Code-Level Modifications:</strong> Utilizing Visual Studio Code to implement direct technical changes via WordPress and PHP.</li>
+                        <li><strong>Health & Vitals:</strong> Resolving critical crawl errors, fixing indexing issues, and optimizing Core Web Vitals.</li>
+                        <li><strong>Google Business Profile (GBP):</strong> Driving Local SEO optimization for niche sectors to capture high-converting traffic.</li>
+                        <li><strong>Performance Reporting:</strong> Managing client relationships and providing actionable data insights using GA4 and GSC.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- EDUCATION & CERTIFICATIONS -->
+            <section id="education" class="experience-section">
+                <h2 class="section-title" style="text-align: left;">Academic History & Certifications</h2>
+                
+                <div class="timeline" style="margin-top: 3rem;">
+                    <div class="timeline-item">
+                        <div class="time-date">2020 - 2022</div>
+                        <h3 class="time-title">MBA - Marketing and Operations</h3>
+                        <div class="time-desc"><p>Happy Valley Business School</p></div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="time-date">2017 - 2020</div>
+                        <h3 class="time-title">Bachelor of Arts - English</h3>
+                        <div class="time-desc"><p>Thiagarajar College</p></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==================== CASE STUDIES PAGE VIEW ==================== -->
+        <div id="page-case-studies" class="site-page">
+            <header style="padding: 40px 0 20px 0; text-align: center;">
+                <h1 class="section-title">Featured SEO Case Studies</h1>
+                <p class="section-subtitle" style="margin: 0 auto;">In-depth breakdowns of strategic SEO execution, technical audits, and organic scaling.</p>
+            </header>
+
+            <!-- CASE STUDY 1 -->
+            <section class="case-study-section">
+                <div class="case-study-header">
+                    <span style="color: var(--primary); text-transform: uppercase; font-size: 0.85rem; font-weight: 600; letter-spacing: 1px;">Featured SEO Case Study 01</span>
+                    <h3 style="font-size: 2.2rem; margin-top: 0.5rem; color: var(--text-main);">Improving Organic Visibility for an Interior Design Company</h3>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem;">Client: Confidential (Interior Design Company) — Client information has been anonymized to respect confidentiality agreements.</p>
+                    
+                    <div class="case-study-meta">
+                        <div class="meta-item"><span>Industry</span><strong>Interior Design</strong></div>
+                        <div class="meta-item"><span>Duration</span><strong>6 Months</strong></div>
+                        <div class="meta-item"><span>CMS Platform</span><strong>WordPress</strong></div>
+                        <div class="meta-item"><span>My Role</span><strong>SEO Executive</strong></div>
+                        <div class="meta-item"><span>Core Focus</span><strong>Technical, On-Page, Local & Content</strong></div>
+                    </div>
+                </div>
+
+                <div class="case-grid-2">
+                    <div class="case-block">
+                        <h4>🚩 The Challenge</h4>
+                        <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.95rem;">The client wanted to improve search visibility for its core service pages while also generating organic traffic through informative blog content.</p>
+                        <p style="color: var(--text-main); font-weight: 500; margin-bottom: 0.8rem; font-size: 0.9rem;">Primary Challenges:</p>
+                        <ul>
+                            <li>Important service pages were not ranking competitively.</li>
+                            <li>Blog articles lacked search visibility.</li>
+                            <li>On-page SEO inconsistencies across multiple pages.</li>
+                            <li>Weak internal linking between services and blogs.</li>
+                            <li>Limited keyword coverage for high-intent searches.</li>
+                            <li>Technical issues affecting crawlability and indexation.</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-block">
+                        <h4>🚀 SEO Strategy</h4>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem;">Instead of focusing only on rankings, I developed a structured SEO strategy to strengthen both the website's technical foundation and topical relevance.</p>
+                        <h5 style="color: var(--text-main); margin-bottom: 0.8rem; font-size: 0.95rem;">Key Focus Areas:</h5>
+                        <ul>
+                            <li>Comprehensive Technical SEO & Crawl Audits</li>
+                            <li>Advanced On-Page Tag & Structure Refinement</li>
+                            <li>Commercial & Informational Keyword Mapping</li>
+                            <li>Internal Architecture & Silo Linking Frameworks</li>
+                            <li>E-E-A-T Focused Content Enhancements</li>
+                            <li>Rigorous Rank & Performance Tracking via GSC/GA4</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="phases-container">
+                    <h4 style="color: var(--text-main); font-size: 1.4rem; margin-bottom: 1rem;">Execution Phases</h4>
+                    <div class="phases-grid">
+                        <div class="phase-card">
+                            <h5>Phase 1 — Technical Audit</h5>
+                            <p>Analyzed crawlability, indexing, XML sitemaps, robots.txt, canonical verification, broken links, Core Web Vitals, and mobile usability.</p>
+                        </div>
+                        <div class="phase-card">
+                            <h5>Phase 2 — On-Page Optimization</h5>
+                            <p>Optimized Meta Titles, Descriptions, heading hierarchy, URL structures, image ALT tags, content enrichment, and search intent alignment.</p>
+                        </div>
+                        <div class="phase-card">
+                            <h5>Phase 3 — Keyword Research</h5>
+                            <p>Executed competitor analysis, keyword mapping, long-tail opportunity discovery, blog topic research, and search intent categorization.</p>
+                        </div>
+                        <div class="phase-card">
+                            <h5>Phase 4 — Site Architecture</h5>
+                            <p>Built a robust internal linking framework connecting services to blogs, optimizing anchor text, and engineering clean search engine crawl paths.</p>
+                        </div>
+                        <div class="phase-card">
+                            <h5>Phase 5 — Content Optimization</h5>
+                            <p>Refined commercial service pages and educational blogs for freshness, readability, precise keyword placement, and E-E-A-T signals.</p>
+                        </div>
+                        <div class="phase-card">
+                            <h5>Phase 6 — Monitoring & Tools</h5>
+                            <p>Tracked keyword rankings, clicks, impressions, CTR, and indexed pages using Google Search Console, GA4, SEMrush, WordPress, and VS Code.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-box">
+                    <h4 style="color: var(--primary); font-size: 1.3rem; margin-bottom: 1rem;">📈 Proven Results & Impact</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                        <div>
+                            <strong style="color: var(--text-main); display: block; margin-bottom: 0.3rem;">Core Service Pages</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Successfully ranked multiple high-intent service keywords within Google's Top 10 search results.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--text-main); display: block; margin-bottom: 0.3rem;">Blog Performance</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Several optimized blog articles achieved Top 5 Google rankings for targeted informational keywords.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--text-main); display: block; margin-bottom: 0.3rem;">Overall Improvements</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Enhanced topical relevance, pristine index health, and a balanced presence across commercial and informational queries.</p>
+                        </div>
+                    </div>
+                    <p style="margin-top: 2rem; font-size: 0.8rem; color: #71717a; border-top: 1px solid var(--border); padding-top: 1rem;">
+                        <em>Confidentiality Notice: This case study represents SEO work completed during agency experience. Client name, website URL, keyword data, and proprietary business information have been withheld to respect confidentiality agreements.</em>
+                    </p>
+                </div>
+            </section>
+
+            <!-- CASE STUDY 2 -->
+            <section class="case-study-section">
+                <div class="case-study-header">
+                    <span style="color: var(--primary); text-transform: uppercase; font-size: 0.85rem; font-weight: 600; letter-spacing: 1px;">Featured SEO Case Study 02</span>
+                    <h3 style="font-size: 2.2rem; margin-top: 0.5rem; color: var(--text-main);">Scaling Organic Growth for an International Service Website</h3>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem;">Client: Confidential (Service Business – East Africa) — Client information has been anonymized to respect confidentiality agreements.</p>
+                    
+                    <div class="case-study-meta">
+                        <div class="meta-item"><span>Industry</span><strong>Service Business</strong></div>
+                        <div class="meta-item"><span>Duration</span><strong>8 Months</strong></div>
+                        <div class="meta-item"><span>Target Market</span><strong>Kenya</strong></div>
+                        <div class="meta-item"><span>My Role</span><strong>SEO Executive</strong></div>
+                        <div class="meta-item"><span>Core Focus</span><strong>Technical SEO, On-Page & Strategy</strong></div>
+                    </div>
+                </div>
+
+                <div class="case-grid-2">
+                    <div class="case-block">
+                        <h4>🚩 The Challenge</h4>
+                        <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.95rem;">When the project started, the website had very limited organic visibility and struggled to attract qualified traffic.</p>
+                        <p style="color: var(--text-main); font-weight: 500; margin-bottom: 0.8rem; font-size: 0.9rem;">Key Obstacles:</p>
+                        <ul>
+                            <li>Low organic traffic (averaging less than 100 monthly users).</li>
+                            <li>Weak keyword rankings and suppressed visibility.</li>
+                            <li>Poor crawlability, missing structured data, and thin page optimization.</li>
+                            <li>Limited internal linking and sparse topical authority.</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-block">
+                        <h4>🚀 The SEO Approach</h4>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem;">Instead of immediately chasing vanity metrics, I deployed a disciplined, multi-phase technical and structural workflow.</p>
+                        <h5 style="color: var(--text-main); margin-bottom: 0.8rem; font-size: 0.95rem;">Core Milestones:</h5>
+                        <ul>
+                            <li>Complete Technical Audit & Priority Fixes</li>
+                            <li>Advanced Schema & XML Sitemap Architecture</li>
+                            <li>Intent-Driven On-Page Page Optimizations</li>
+                            <li>Pillar & Cluster Topic Planning</li>
+                            <li>Strategic Off-Page Citation & Backlink Acquisition</li>
+                            <li>Continuous Data Tracking via GA4 & GSC</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="phases-container">
+                    <h4 style="color: var(--text-main); font-size: 1.4rem; margin-bottom: 1rem;">Execution Phases</h4>
+                    <div class="phases-grid">
+                        <div class="phase-card">
+                            <h5>Phase 1 — Website Audit</h5>
+                            <p>Evaluated crawlability, indexing, structure, Core Web Vitals, and content gaps to prioritize high-impact execution items.</p>
+                        </div>
+                        <div class="phase-card">
+                            <h5>Phase 2 — Technical SEO</h5>
+                            <p>Fixed crawl errors, optimized robots.txt, sitemaps, canonicals, implemented schema markup, resolved duplicates, and optimized URLs.</p>
+                        </div>
+                        <div class="phase-card">
+                            <h5>Phase 3 — On-Page Optimization</h5>
+                            <p>Refined Meta Titles, Descriptions, heading trees, keyword densities, search intent alignment, and image assets.</p>
+                        </div>
+                        <div class="phase-card">
+                            <h5>Phase 4 — Keyword Research</h5>
+                            <p>Executed competitor analysis, keyword mapping, topic clustering, and long-tail opportunity discovery tailored to the Kenyan market.</p>
+                        </div>
+                        <div class="phase-card">
+                            <h5>Phase 5 — Architecture & Linking</h5>
+                            <p>Planned site hierarchy, optimized anchor text distribution, and built a cohesive pillar-and-cluster internal linking framework.</p>
+                        </div>
+                        <div class="phase-card">
+                            <h5>Phase 6 — Authority Building</h5>
+                            <p>Conducted backlink opportunity research, competitive gap analysis, citation building, and strategic authority acquisition.</p>
+                        </div>
+                        <div class="phase-card" style="grid-column: 1 / -1;">
+                            <h5>Phase 7 — Performance Monitoring</h5>
+                            <p>Continuously measured organic traffic, rankings, impressions, CTR, index coverage, and technical health using GSC, GA4, and SEMrush.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-box">
+                    <h4 style="color: var(--primary); font-size: 1.3rem; margin-bottom: 1rem;">📈 Proven Results & Business Impact</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; align-items: center;">
+                        <div style="background: var(--bg-base); padding: 1.5rem; border-radius: 12px; border: 1.5px solid var(--primary); text-align: center;">
+                            <span style="display: block; font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.3rem;">Organic Traffic Growth</span>
+                            <strong style="font-size: 1.8rem; color: var(--primary); font-family: 'Poppins';">&lt; 100 &rarr; ~9,000</strong>
+                            <span style="display: block; font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">Monthly Users (Peak Oct 2025)</span>
+                        </div>
+                        <div>
+                            <strong style="color: var(--text-main); display: block; margin-bottom: 0.3rem;">Search Visibility</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.8rem;">Multiple high-intent target keywords successfully reached Google Page 1.</p>
+                            <strong style="color: var(--text-main); display: block; margin-bottom: 0.3rem;">Technical Health</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Maximized crawl efficiency, clean index coverage, and robust topical authority.</p>
+                        </div>
+                    </div>
+                    <p style="margin-top: 2rem; font-size: 0.8rem; color: #71717a; border-top: 1px solid var(--border); padding-top: 1rem;">
+                        <em>Confidentiality Notice: This case study is based on real SEO work performed during agency experience. Client name, website URL, proprietary business information, and sensitive performance metrics have been intentionally anonymized to comply with confidentiality agreements.</em>
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-subtitle" style="margin: 0 auto;">Whether you're looking for a freelance SEO expert or a full-time professional, I'm ready to drive your next growth phase.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Email Me</h3>
+                    <p>For project inquiries and professional opportunities.</p>
+                    <a href="mailto:johnjason087@gmail.com">johnjason087@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <h3>Call Me</h3>
+                    <p>Available for direct strategy consultations.</p>
+                    <a href="tel:+918667597994">+91 8667597994</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Jason John Colbert. Built for organic growth.</p>
+            <p style="margin-top: 10px; color: var(--text-muted);">
+                Bengaluru, Karnataka, India
+            </p>
+        </div>
+    </footer>
+
+    <!-- CLIENT-SIDE ROUTING SCRIPT -->
+    <script>
+        function switchPage(pageId) {
+            document.querySelectorAll('.site-page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById('page-' + pageId).classList.add('active');
+            
+            document.getElementById('nav-home-link').style.color = (pageId === 'home') ? 'var(--primary)' : 'var(--text-muted)';
+            document.getElementById('nav-case-link').style.color = (pageId === 'case-studies') ? 'var(--primary)' : 'var(--text-muted)';
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
