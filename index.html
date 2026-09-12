@@ -537,8 +537,9 @@
             <div class="logo">JASON JOHN COLBERT<span>.</span></div>
             <div class="nav-links">
                 <a href="#home" onclick="switchPage('home'); return false;" id="nav-home-link" style="color: var(--primary);">Home</a>
-                <a href="#case-studies" onclick="switchPage('case-studies'); return false;" id="nav-case-link">Case Studies</a>
-                <a href="#contact" onclick="switchPage('home'); location.hash='#contact'; return false;">Contact</a>
+                <a href="#case-study-1" onclick="openCaseStudy('case-study-1'); return false;">Case Study 1</a>
+                <a href="#case-study-2" onclick="openCaseStudy('case-study-2'); return false;">Case Study 2</a>
+                <a href="#case-study-3" onclick="openCaseStudy('case-study-3'); return false;">Case Study 3</a>
             </div>
             <a href="https://www.linkedin.com/in/jason-john-colbert/" target="_blank" class="btn">Connect on LinkedIn</a>
         </nav>
@@ -557,7 +558,7 @@
                         Engineering<br>
                         <span class="gradient-text">Search</span> Visibility.
                     </h1>
-                    <p>I am Jason John Colbert. I am a highly analytical, performance-driven SEO Specialist leveraging technical expertise and data-driven strategies to deliver scalable organic growth and measurable business impact.</p>
+                    <p>I am Jason John Colbert, an SEO Specialist with 2.6+ years of experience in agency-driven SEO, leveraging technical expertise and data-driven strategies to deliver scalable organic growth and measurable business impact.</p>
                     <div style="display: flex; gap: 15px; margin-top: 1rem; flex-wrap: wrap;">
                         <a href="#impact" class="btn">View Key Achievements</a>
                         <a href="javascript:void(0)" onclick="switchPage('case-studies')" class="btn" style="background: transparent; border: 1px solid var(--primary); box-shadow: none;">Read Case Studies</a>
@@ -578,9 +579,9 @@
                         <div class="metric-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
                         </div>
-                        <div class="metric-value">90X</div>
-                        <div class="metric-label">Traffic Scaling</div>
-                        <div class="metric-desc">Scaled a new Kenya-based website from under 100 organic users to ~9,000 monthly users.</div>
+                        <div class="metric-value">9,000+</div>
+                        <div class="metric-label">Monthly Organic Users</div>
+                        <div class="metric-desc">Scaled a new Kenya-based website from under 100 organic users to approximately 9,000 monthly users.</div>
                     </div>
 
                     <div class="metric-card">
@@ -588,17 +589,17 @@
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                         </div>
                         <div class="metric-value">Page 1</div>
-                        <div class="metric-label">Keyword Dominance</div>
-                        <div class="metric-desc">Engineered strategies to push multiple high-intent keywords from Page 6-7 directly to Page 1 on Google SERPs.</div>
+                        <div class="metric-label">High-Intent Rankings</div>
+                        <div class="metric-desc">Improved multiple high-intent keywords from Google search result pages 6–7 to Page 1 and generated relevant leads.</div>
                     </div>
 
                     <div class="metric-card">
                         <div class="metric-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                         </div>
-                        <div class="metric-value">Stable</div>
-                        <div class="metric-label">Algorithmic Resilience</div>
-                        <div class="metric-desc">Maintained traffic volume and keyword ranking stability across multiple accounts during major Google algorithm updates.</div>
+                        <div class="metric-value">Multi-Client</div>
+                        <div class="metric-label">SEO Delivery</div>
+                        <div class="metric-desc">Executed and optimized SEO campaigns across multiple client websites within an agency environment.</div>
                     </div>
                 </div>
             </section>
@@ -615,11 +616,13 @@
                         <h3>⚙️ Technical SEO</h3>
                         <p>Core infrastructure, crawl health, and performance optimizations.</p>
                         <div class="tag-wrap">
-                            <span class="skill-tag">Technical SEO</span>
+                            <span class="skill-tag">Schema & Structured Data</span>
                             <span class="skill-tag">Crawl & Indexing Optimization</span>
                             <span class="skill-tag">Core Web Vitals</span>
                             <span class="skill-tag">Page Speed & Mobile Usability</span>
                             <span class="skill-tag">Mobile Technical Optimisation</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">PHP (Basic)</span>
                         </div>
                     </div>
 
@@ -628,7 +631,9 @@
                         <h3>✍️ On-Page & Architecture</h3>
                         <p>Structuring content and metadata for search engine clarity and user intent.</p>
                         <div class="tag-wrap">
-                            <span class="skill-tag">On-Page Optimization</span>
+                            <span class="skill-tag">Site Architecture</span>
+                            <span class="skill-tag">Topical Authority</span>
+                            <span class="skill-tag">Intent Mapping</span>
                             <span class="skill-tag">Internal Linking & URL Architecture</span>
                             <span class="skill-tag">Metadata & Header Hierarchies</span>
                             <span class="skill-tag">Search Intent Optimization</span>
@@ -640,10 +645,12 @@
                         <h3>🚀 Advanced Optimization</h3>
                         <p>Future-proofing visibility via next-gen search paradigms and authority building.</p>
                         <div class="tag-wrap">
-                            <span class="skill-tag">Link Building</span>
                             <span class="skill-tag">AEO (Answer Engine Optimization)</span>
                             <span class="skill-tag">GEO (Generative Engine Optimization)</span>
-                            <span class="skill-tag">Google Business Profile (GBP)</span>
+                            <span class="skill-tag">Competitor Gap Analysis</span>
+                            <span class="skill-tag">Content Strategy &amp; Optimization</span>
+                            <span class="skill-tag">E-E-A-T Optimization</span>
+                            <span class="skill-tag">Conversion-Focused SEO</span>
                         </div>
                     </div>
 
@@ -656,7 +663,9 @@
                             <span class="skill-tag">Google Search Console</span>
                             <span class="skill-tag">SEMrush</span>
                             <span class="skill-tag">Ubersuggest</span>
-                            <span class="skill-tag">Ahref</span>
+                            <span class="skill-tag">Ahrefs</span>
+                            <span class="skill-tag">Screaming Frog</span>
+                            <span class="skill-tag">Microsoft Clarity</span>
                         </div>
                     </div>
 
@@ -666,6 +675,7 @@
                         <p>Direct code implementation and stakeholder collaboration.</p>
                         <div class="tag-wrap">
                             <span class="skill-tag">WordPress</span>
+                            <span class="skill-tag">Shopify</span>
                             <span class="skill-tag">Visual Studio Code</span>
                             <span class="skill-tag">Performance Reporting</span>
                             <span class="skill-tag">Client Communication</span>
@@ -681,14 +691,15 @@
                 <div class="timeline" style="margin-top: 3rem;">
                     <!-- Role 1: Catalysts -->
                     <div class="timeline-item">
-                        <div class="time-date">JUNE 2026 – PRESENT</div>
+                        <div class="time-date">JUNE 2026 – AUGUST 2026</div>
                         <h3 class="time-title">Digital Marketing Analyst</h3>
                         <div class="time-company">Catalysts</div>
                         <div class="time-desc">
                             <ul>
-                                <li>Driving organic growth through precise data analysis and long-term search strategy.</li>
-                                <li>Identifying unique growth opportunities that fundamentally enhance online visibility, user engagement, and overarching business performance.</li>
-                                <li>Focusing on advanced SEO methodologies including meticulous keyword research, technical audits, content strategy, website optimization, AEO, GEO, and executive report preparation.</li>
+                                <li>Executed On-Page, Off-Page, and Technical SEO activities across client websites, including keyword optimization, metadata, internal linking, technical audits, and link-building initiatives.</li>
+                                <li>Conducted keyword research, prepared keyword master files, and developed keyword-to-URL mappings for a quick-commerce construction material delivery business.</li>
+                                <li>Monitored website performance using Google Search Console, GA4, SEMrush, Ahrefs, and Microsoft Clarity to identify opportunities for improved visibility and rankings.</li>
+                                <li>Leveraged Claude AI with SEO best practices to optimize content for traditional search and AI-driven search, improving relevance, structure, and search-intent alignment.</li>
                             </ul>
                         </div>
                     </div>
@@ -700,14 +711,12 @@
                         <div class="time-company">Digital Corsel, Bangalore</div>
                         <div class="time-desc">
                             <ul>
-                                <li>Orchestrate 5+ concurrent SEO projects, overseeing end-to-end strategy, technical execution, and performance tracking to deliver measurable organic growth.</li>
-                                <li>Execute comprehensive technical SEO audits, resolving critical crawl errors, indexing issues, and core web vitals (page speed and mobile usability) to enhance site health.</li>
-                                <li>Implement advanced on-page SEO, optimizing metadata, header hierarchies, and URL structures to secure top-tier keyword rankings across diverse industries.</li>
-                                <li>Develop direct technical implementations via WordPress and PHP; utilized Visual Studio Code to modify source files and streamline deployment without developer intervention.</li>
-                                <li>Drive Local SEO and GMB (Google Business Profile) optimization for niche sectors, including Healthcare, Education, and Real Estate, increasing local search visibility.</li>
-                                <li>Engineer intent-driven SEO strategies aligned with E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) and industry compliance to increase domain authority.</li>
-                                <li>Manage client relationships as the primary point of contact, leading strategy consultations, performance reporting, and stakeholder expectation management.</li>
-                                <li>Analyze SEO performance metrics using Google Search Console (GSC), GA4, UberSuggest and SEMrush to provide actionable data insights and monthly ROI reporting.</li>
+                                <li>Managed 5+ concurrent SEO projects, overseeing end-to-end SEO strategy, technical execution, content optimization, and performance tracking.</li>
+                                <li>Conducted comprehensive Technical SEO audits using Screaming Frog, identifying and resolving crawl errors, indexing issues, canonical tags, redirects, XML sitemap, robots.txt, structured data, and Core Web Vitals.</li>
+                                <li>Implemented advanced On-Page SEO, optimizing metadata, header hierarchies, URL structures, internal linking, and keyword targeting to improve search rankings.</li>
+                                <li>Managed Local SEO and Google Business Profile optimization for healthcare, education, real estate, and other niche industries to improve local search visibility.</li>
+                                <li>Worked on Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO) strategies to improve content visibility across AI-powered search and answer platforms.</li>
+                                <li>Managed client relationships, SEO performance reporting, and strategy consultations using Google Search Console, GA4, Ahrefs, and SEMrush.</li>
                             </ul>
                         </div>
                     </div>
@@ -747,13 +756,13 @@
                         <p>Informational content scaling & institutional student acquisition funnels.</p>
                     </div>
 
-                    <!-- Astrology -->
+                    <!-- E-commerce -->
                     <div class="industry-item-card">
                         <div class="industry-image-wrapper">
-                            <img src="astrology.png" alt="Astrology SEO">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&q=80" alt="E-commerce SEO">
                         </div>
-                        <h3>Astrology</h3>
-                        <p>High-volume organic search optimization & programmatic content strategies.</p>
+                        <h3>E-commerce</h3>
+                        <p>Product, category, and transactional keyword optimization to improve organic visibility and conversion opportunities.</p>
                     </div>
 
                     <!-- Manufacturing -->
@@ -778,10 +787,10 @@
 
             <!-- MID-PAGE CTA BANNER -->
             <section class="cta-banner">
-                <h2>Ready to Scale Your Organic Traffic?</h2>
-                <p>Let's build a data-driven SEO strategy that elevates your search visibility and converts clicks into clients.</p>
+                <h2>Explore My SEO Experience</h2>
+                <p>Review my technical SEO experience, campaign execution, and approach to improving organic visibility and search performance.</p>
                 <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                    <a href="#contact" class="btn">Let's Talk Growth</a>
+                    <a href="#contact" class="btn">Discuss SEO Opportunities</a>
                     <a href="javascript:void(0)" onclick="switchPage('case-studies')" class="btn" style="background: transparent; border: 1px solid var(--primary); box-shadow: none;">View Case Studies</a>
                 </div>
             </section>
@@ -843,52 +852,52 @@
         <!-- ==================== CASE STUDIES PAGE VIEW ==================== -->
         <div id="page-case-studies" class="site-page">
             <header style="padding: 40px 0 20px 0; text-align: center;">
-                <h1 class="section-title">Featured SEO Case Studies</h1>
-                <p class="section-subtitle" style="margin: 0 auto;">In-depth breakdowns of strategic SEO execution, technical audits, and organic scaling.</p>
+                <h1 class="section-title">Selected SEO Work & Case Studies</h1>
+                <p class="section-subtitle" style="margin: 0 auto;">In-depth examples of SEO strategy, technical execution, content optimization, and measurable search performance improvements.</p>
             </header>
 
             <!-- CASE STUDY 1 -->
-            <section class="case-study-section">
+            <section id="case-study-1" class="case-study-section">
                 <div class="case-study-header">
                     <span style="color: var(--primary); text-transform: uppercase; font-size: 0.85rem; font-weight: 600; letter-spacing: 1px;">Featured SEO Case Study 01</span>
-                    <h3 style="font-size: 2.2rem; margin-top: 0.5rem; color: var(--text-main);">Improving Organic Visibility for an Interior Design Company</h3>
-                    <p style="color: var(--text-muted); margin-top: 0.5rem;">Client: Confidential (Interior Design Company) — Client information has been anonymized to respect confidentiality agreements.</p>
+                    <h3 style="font-size: 2.2rem; margin-top: 0.5rem; color: var(--text-main);">Scaling Organic Growth for a Kenya-Based Solar Energy Website</h3>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem;">Agency project — Client details anonymized to respect confidentiality agreements.</p>
                     
                     <div class="case-study-meta">
-                        <div class="meta-item"><span>Industry</span><strong>Interior Design</strong></div>
-                        <div class="meta-item"><span>Duration</span><strong>6 Months</strong></div>
-                        <div class="meta-item"><span>CMS Platform</span><strong>WordPress</strong></div>
+                        <div class="meta-item"><span>Industry</span><strong>Solar Energy & Power Solutions</strong></div>
+                        <div class="meta-item"><span>Target Market</span><strong>Kenya</strong></div>
+                        <div class="meta-item"><span>Project Duration</span><strong>Approximately 5–6 Months</strong></div>
                         <div class="meta-item"><span>My Role</span><strong>SEO Executive</strong></div>
-                        <div class="meta-item"><span>Core Focus</span><strong>Technical, On-Page, Local & Content</strong></div>
+                        <div class="meta-item"><span>Core Focus</span><strong>Technical, On-Page, Content & Off-Page SEO</strong></div>
                     </div>
                 </div>
 
                 <div class="case-grid-2">
                     <div class="case-block">
                         <h4>🚩 The Challenge</h4>
-                        <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.95rem;">The client wanted to improve search visibility for its core service pages while also generating organic traffic through informative blog content.</p>
+                        <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.95rem;">The Kenya-based solar energy website had very limited organic visibility at the beginning of the engagement. The project required a complete SEO improvement process across core service pages, product pages, supporting blogs, technical foundations, and off-page authority in a competitive solar-energy market.</p>
                         <p style="color: var(--text-main); font-weight: 500; margin-bottom: 0.8rem; font-size: 0.9rem;">Primary Challenges:</p>
                         <ul>
-                            <li>Important service pages were not ranking competitively.</li>
-                            <li>Blog articles lacked search visibility.</li>
-                            <li>On-page SEO inconsistencies across multiple pages.</li>
-                            <li>Weak internal linking between services and blogs.</li>
-                            <li>Limited keyword coverage for high-intent searches.</li>
-                            <li>Technical issues affecting crawlability and indexation.</li>
+                            <li>Very low initial organic traffic and search visibility.</li>
+                            <li>Core and product pages required stronger keyword targeting.</li>
+                            <li>Technical SEO issues needed to be documented and resolved.</li>
+                            <li>Supporting blog content had to be planned around relevant search demand.</li>
+                            <li>Strong competition across solar and renewable-energy searches in Kenya.</li>
+                            <li>Need to improve both informational discovery and commercial search visibility.</li>
                         </ul>
                     </div>
 
                     <div class="case-block">
-                        <h4>🚀 SEO Strategy</h4>
-                        <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem;">Instead of focusing only on rankings, I developed a structured SEO strategy to strengthen both the website's technical foundation and topical relevance.</p>
-                        <h5 style="color: var(--text-main); margin-bottom: 0.8rem; font-size: 0.95rem;">Key Focus Areas:</h5>
+                        <h4>🚀 SEO Growth Strategy</h4>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem;">I worked on the website’s core pages, product pages, blog content, technical SEO recommendations, and link-building activities to establish stronger relevance, crawlability, keyword coverage, and authority.</p>
+                        <h5 style="color: var(--text-main); margin-bottom: 0.8rem; font-size: 0.95rem;">Core Workstreams:</h5>
                         <ul>
-                            <li>Comprehensive Technical SEO & Crawl Audits</li>
-                            <li>Advanced On-Page Tag & Structure Refinement</li>
-                            <li>Commercial & Informational Keyword Mapping</li>
-                            <li>Internal Architecture & Silo Linking Frameworks</li>
-                            <li>E-E-A-T Focused Content Enhancements</li>
-                            <li>Rigorous Rank & Performance Tracking via GSC/GA4</li>
+                            <li>Keyword research and keyword targeting for service and product pages.</li>
+                            <li>On-page optimization of titles, meta descriptions, headings, content, URLs, and keyword placement.</li>
+                            <li>Blog planning, optimization, and publishing to expand organic keyword coverage.</li>
+                            <li>Prepared a technical SEO blueprint and shared implementation recommendations with the development team.</li>
+                            <li>Improved internal linking and page-level relevance across the website.</li>
+                            <li>Executed relevant link-building and selected guest-posting activities to support authority growth.</li>
                         </ul>
                     </div>
                 </div>
@@ -897,168 +906,274 @@
                     <h4 style="color: var(--text-main); font-size: 1.4rem; margin-bottom: 1rem;">Execution Phases</h4>
                     <div class="phases-grid">
                         <div class="phase-card">
-                            <h5>Phase 1 — Technical Audit</h5>
-                            <p>Analyzed crawlability, indexing, XML sitemaps, robots.txt, canonical verification, broken links, Core Web Vitals, and mobile usability.</p>
+                            <h5>Phase 1 — Website & Market Analysis</h5>
+                            <p>Reviewed the website, solar-energy product offerings, target market, competitors, existing page structure, and initial organic performance.</p>
                         </div>
                         <div class="phase-card">
-                            <h5>Phase 2 — On-Page Optimization</h5>
-                            <p>Optimized Meta Titles, Descriptions, heading hierarchy, URL structures, image ALT tags, content enrichment, and search intent alignment.</p>
+                            <h5>Phase 2 — Core & Product Page Optimization</h5>
+                            <p>Optimized important service and product pages using relevant keywords, improved metadata, headings, content structure, internal linking, and search-intent alignment.</p>
                         </div>
                         <div class="phase-card">
-                            <h5>Phase 3 — Keyword Research</h5>
-                            <p>Executed competitor analysis, keyword mapping, long-tail opportunity discovery, blog topic research, and search intent categorization.</p>
+                            <h5>Phase 3 — Technical SEO Blueprint</h5>
+                            <p>Audited technical SEO elements and prepared a detailed blueprint covering crawlability, indexing, redirects, canonical signals, sitemap, robots.txt, page performance, and other required fixes for the development team.</p>
                         </div>
                         <div class="phase-card">
-                            <h5>Phase 4 — Site Architecture</h5>
-                            <p>Built a robust internal linking framework connecting services to blogs, optimizing anchor text, and engineering clean search engine crawl paths.</p>
+                            <h5>Phase 4 — Blog Content & Organic Expansion</h5>
+                            <p>Planned, optimized, and uploaded supporting blog content targeting informational and problem-solving queries related to solar products and energy solutions.</p>
                         </div>
                         <div class="phase-card">
-                            <h5>Phase 5 — Content Optimization</h5>
-                            <p>Refined commercial service pages and educational blogs for freshness, readability, precise keyword placement, and E-E-A-T signals.</p>
+                            <h5>Phase 5 — Authority & Link Building</h5>
+                            <p>Worked on relevant link-building activities, including selected guest posts and external placements, to strengthen the website’s authority and support target-page visibility.</p>
                         </div>
                         <div class="phase-card">
-                            <h5>Phase 6 — Monitoring & Tools</h5>
-                            <p>Tracked keyword rankings, clicks, impressions, CTR, and indexed pages using Google Search Console, GA4, SEMrush, WordPress, and VS Code.</p>
+                            <h5>Phase 6 — Monitoring & Iterative Optimization</h5>
+                            <p>Monitored Google Search Console and GA4 performance, reviewed clicks, impressions, organic users, keyword movement, and page-level performance to guide ongoing optimization.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="results-box">
-                    <h4 style="color: var(--primary); font-size: 1.3rem; margin-bottom: 1rem;">📈 Proven Results & Impact</h4>
+                    <h4 style="color: var(--primary); font-size: 1.3rem; margin-bottom: 1rem;">📈 Results & Business Impact</h4>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
                         <div>
-                            <strong style="color: var(--text-main); display: block; margin-bottom: 0.3rem;">Core Service Pages</strong>
-                            <p style="color: var(--text-muted); font-size: 0.9rem;">Successfully ranked multiple high-intent service keywords within Google's Top 10 search results.</p>
-                        </div>
-                        <div>
-                            <strong style="color: var(--text-main); display: block; margin-bottom: 0.3rem;">Blog Performance</strong>
-                            <p style="color: var(--text-muted); font-size: 0.9rem;">Several optimized blog articles achieved Top 5 Google rankings for targeted informational keywords.</p>
-                        </div>
-                        <div>
-                            <strong style="color: var(--text-main); display: block; margin-bottom: 0.3rem;">Overall Improvements</strong>
-                            <p style="color: var(--text-muted); font-size: 0.9rem;">Enhanced topical relevance, pristine index health, and a balanced presence across commercial and informational queries.</p>
-                        </div>
-                    </div>
-                    <p style="margin-top: 2rem; font-size: 0.8rem; color: #71717a; border-top: 1px solid var(--border); padding-top: 1rem;">
-                        <em>Confidentiality Notice: This case study represents SEO work completed during agency experience. Client name, website URL, keyword data, and proprietary business information have been withheld to respect confidentiality agreements.</em>
-                    </p>
-                </div>
-            </section>
-
-            <!-- CASE STUDY 2 -->
-            <section class="case-study-section">
-                <div class="case-study-header">
-                    <span style="color: var(--primary); text-transform: uppercase; font-size: 0.85rem; font-weight: 600; letter-spacing: 1px;">Featured SEO Case Study 02</span>
-                    <h3 style="font-size: 2.2rem; margin-top: 0.5rem; color: var(--text-main);">Scaling Organic Growth for an International Service Website</h3>
-                    <p style="color: var(--text-muted); margin-top: 0.5rem;">Client: Confidential (Service Business – East Africa) — Client information has been anonymized to respect confidentiality agreements.</p>
-                    
-                    <div class="case-study-meta">
-                        <div class="meta-item"><span>Industry</span><strong>Service Business</strong></div>
-                        <div class="meta-item"><span>Duration</span><strong>8 Months</strong></div>
-                        <div class="meta-item"><span>Target Market</span><strong>Kenya</strong></div>
-                        <div class="meta-item"><span>My Role</span><strong>SEO Executive</strong></div>
-                        <div class="meta-item"><span>Core Focus</span><strong>Technical SEO, On-Page & Strategy</strong></div>
-                    </div>
-                </div>
-
-                <div class="case-grid-2">
-                    <div class="case-block">
-                        <h4>🚩 The Challenge</h4>
-                        <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.95rem;">When the project started, the website had very limited organic visibility and struggled to attract qualified traffic.</p>
-                        <p style="color: var(--text-main); font-weight: 500; margin-bottom: 0.8rem; font-size: 0.9rem;">Key Obstacles:</p>
-                        <ul>
-                            <li>Low organic traffic (averaging less than 100 monthly users).</li>
-                            <li>Weak keyword rankings and suppressed visibility.</li>
-                            <li>Poor crawlability, missing structured data, and thin page optimization.</li>
-                            <li>Limited internal linking and sparse topical authority.</li>
-                        </ul>
-                    </div>
-
-                    <div class="case-block">
-                        <h4>🚀 The SEO Approach</h4>
-                        <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem;">Instead of immediately chasing vanity metrics, I deployed a disciplined, multi-phase technical and structural workflow.</p>
-                        <h5 style="color: var(--text-main); margin-bottom: 0.8rem; font-size: 0.95rem;">Core Milestones:</h5>
-                        <ul>
-                            <li>Complete Technical Audit & Priority Fixes</li>
-                            <li>Advanced Schema & XML Sitemap Architecture</li>
-                            <li>Intent-Driven On-Page Page Optimizations</li>
-                            <li>Pillar & Cluster Topic Planning</li>
-                            <li>Strategic Off-Page Citation & Backlink Acquisition</li>
-                            <li>Continuous Data Tracking via GA4 & GSC</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="phases-container">
-                    <h4 style="color: var(--text-main); font-size: 1.4rem; margin-bottom: 1rem;">Execution Phases</h4>
-                    <div class="phases-grid">
-                        <div class="phase-card">
-                            <h5>Phase 1 — Website Audit</h5>
-                            <p>Evaluated crawlability, indexing, structure, Core Web Vitals, and content gaps to prioritize high-impact execution items.</p>
-                        </div>
-                        <div class="phase-card">
-                            <h5>Phase 2 — Technical SEO</h5>
-                            <p>Fixed crawl errors, optimized robots.txt, sitemaps, canonicals, implemented schema markup, resolved duplicates, and optimized URLs.</p>
-                        </div>
-                        <div class="phase-card">
-                            <h5>Phase 3 — On-Page Optimization</h5>
-                            <p>Refined Meta Titles, Descriptions, heading trees, keyword densities, search intent alignment, and image assets.</p>
-                        </div>
-                        <div class="phase-card">
-                            <h5>Phase 4 — Keyword Research</h5>
-                            <p>Executed competitor analysis, keyword mapping, topic clustering, and long-tail opportunity discovery tailored to the Kenyan market.</p>
-                        </div>
-                        <div class="phase-card">
-                            <h5>Phase 5 — Architecture & Linking</h5>
-                            <p>Planned site hierarchy, optimized anchor text distribution, and built a cohesive pillar-and-cluster internal linking framework.</p>
-                        </div>
-                        <div class="phase-card">
-                            <h5>Phase 6 — Authority Building</h5>
-                            <p>Conducted backlink opportunity research, competitive gap analysis, citation building, and strategic authority acquisition.</p>
-                        </div>
-                        <div class="phase-card" style="grid-column: 1 / -1;">
-                            <h5>Phase 7 — Performance Monitoring</h5>
-                            <p>Continuously measured organic traffic, rankings, impressions, CTR, index coverage, and technical health using GSC, GA4, and SEMrush.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="results-box">
-                    <h4 style="color: var(--primary); font-size: 1.3rem; margin-bottom: 1rem;">📈 Proven Results & Business Impact</h4>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; align-items: center;">
-                        <div style="background: var(--bg-base); padding: 1.5rem; border-radius: 12px; border: 1.5px solid var(--primary); text-align: center;">
-                            <span style="display: block; font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.3rem;">Organic Traffic Growth</span>
-                            <strong style="font-size: 1.8rem; color: var(--primary); font-family: 'Poppins';">&lt; 100 &rarr; ~9,000</strong>
-                            <span style="display: block; font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">Monthly Users (Peak Oct 2025)</span>
+                            <strong style="color: var(--text-main); display: block; margin-bottom: 0.3rem;">Organic Traffic Growth</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Scaled monthly organic traffic from a near-zero baseline — under 100 organic users — to approximately <strong>9,000 monthly organic users</strong> within around five to six months.</p>
                         </div>
                         <div>
                             <strong style="color: var(--text-main); display: block; margin-bottom: 0.3rem;">Search Visibility</strong>
-                            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.8rem;">Multiple high-intent target keywords successfully reached Google Page 1.</p>
-                            <strong style="color: var(--text-main); display: block; margin-bottom: 0.3rem;">Technical Health</strong>
-                            <p style="color: var(--text-muted); font-size: 0.9rem;">Maximized crawl efficiency, clean index coverage, and robust topical authority.</p>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Achieved substantial growth in Google Search Console visibility, with impressions and clicks increasing by approximately 3x–4x during the optimization period.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--text-main); display: block; margin-bottom: 0.3rem;">Page-Level Growth</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Improved the organic performance of core service pages, product pages, and supporting blog content through targeted on-page and content optimization.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--text-main); display: block; margin-bottom: 0.3rem;">Technical & Authority Improvements</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Created and communicated a technical SEO blueprint for issue resolution while supporting website authority through relevant link-building and guest-posting activities.</p>
                         </div>
                     </div>
                     <p style="margin-top: 2rem; font-size: 0.8rem; color: #71717a; border-top: 1px solid var(--border); padding-top: 1rem;">
-                        <em>Confidentiality Notice: This case study is based on real SEO work performed during agency experience. Client name, website URL, proprietary business information, and sensitive performance metrics have been intentionally anonymized to comply with confidentiality agreements.</em>
+                        <em>Confidentiality Notice: Client name, website URL, exact keyword list, and proprietary business information have been withheld. Performance figures are presented in rounded terms based on available Google Search Console and Google Analytics reporting.</em>
                     </p>
                 </div>
             </section>
-        </div>
 
-        <!-- CONTACT SECTION -->
+
+
+<!-- CASE STUDY 2 -->
+            <section id="case-study-2" class="case-study-section">
+                <div class="case-study-header">
+                    <span style="color: var(--primary); text-transform: uppercase; font-size: 0.85rem; font-weight: 600; letter-spacing: 1px;">Featured SEO Case Study 02</span>
+                    <h3 style="font-size: 2.2rem; margin-top: 0.5rem; color: var(--text-main);">SEO Foundation & Website Planning for a Quick-Commerce Construction Materials Website</h3>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem;">Agency project — Client details anonymized to respect confidentiality agreements.</p>
+                    
+                    <div class="case-study-meta">
+                        <div class="meta-item"><span>Industry</span><strong>Quick-Commerce Construction Materials</strong></div>
+                        <div class="meta-item"><span>Project Stage</span><strong>Initial SEO Foundation</strong></div>
+                        <div class="meta-item"><span>Primary Scope</span><strong>10 Main Categories + 55+ Subcategories</strong></div>
+                        <div class="meta-item"><span>My Role</span><strong>Digital Marketing Analyst</strong></div>
+                        <div class="meta-item"><span>Core Focus</span><strong>Keyword Research, Mapping & SEO Architecture</strong></div>
+                    </div>
+                </div>
+
+                <div class="case-grid-2">
+                    <div class="case-block">
+                        <h4>🚩 The Project Requirement</h4>
+                        <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.95rem;">The business was preparing to launch a quick-commerce website for construction materials such as wires, fans, electrical products, and other small construction-related items. The website needed a clear SEO structure before development and content implementation.</p>
+                        <p style="color: var(--text-main); font-weight: 500; margin-bottom: 0.8rem; font-size: 0.9rem;">Key Requirements:</p>
+                        <ul>
+                            <li>Build a comprehensive keyword database for the complete website.</li>
+                            <li>Identify primary and secondary keywords for every category and subcategory.</li>
+                            <li>Map search intent and keywords to the correct target URLs.</li>
+                            <li>Create a scalable website hierarchy for approximately 10 main categories and 55+ subcategories.</li>
+                            <li>Ensure SEO requirements were considered before website development.</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-block">
+                        <h4>🚀 SEO Planning Approach</h4>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem;">My responsibility was to establish the SEO foundation from the beginning so the website could be developed with proper keyword targeting, URL structure, category hierarchy, and search-intent alignment.</p>
+                        <h5 style="color: var(--text-main); margin-bottom: 0.8rem; font-size: 0.95rem;">Core Deliverables:</h5>
+                        <ul>
+                            <li>Detailed keyword research and master keyword file.</li>
+                            <li>Primary and secondary keyword identification for all pages.</li>
+                            <li>Keyword-to-URL mapping across categories and subcategories.</li>
+                            <li>SEO-friendly URL recommendations and page naming structure.</li>
+                            <li>Website hierarchy and on-site SEO recommendations.</li>
+                            <li>SEO implementation SOP and development recommendations.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="phases-container">
+                    <h4 style="color: var(--text-main); font-size: 1.4rem; margin-bottom: 1rem;">Project Execution Phases</h4>
+                    <div class="phases-grid">
+                        <div class="phase-card">
+                            <h5>Phase 1 — Business & Website Understanding</h5>
+                            <p>Reviewed the business model, product range, target customers, planned website categories, and the way users would search for construction materials online.</p>
+                        </div>
+                        <div class="phase-card">
+                            <h5>Phase 2 — Comprehensive Keyword Research</h5>
+                            <p>Conducted keyword research for the main product categories and subcategories, identifying relevant commercial, transactional, and product-focused search terms.</p>
+                        </div>
+                        <div class="phase-card">
+                            <h5>Phase 3 — Keyword Master File & Mapping</h5>
+                            <p>Prepared and organized the keyword master file, assigning primary and secondary keywords to all 10 major categories and 55+ subcategories.</p>
+                        </div>
+                        <div class="phase-card">
+                            <h5>Phase 4 — URL & Website Structure Planning</h5>
+                            <p>Recommended SEO-friendly URLs, category naming conventions, page hierarchy, and a scalable structure to support crawlability, relevance, and future expansion.</p>
+                        </div>
+                        <div class="phase-card">
+                            <h5>Phase 5 — On-Site SEO Recommendations</h5>
+                            <p>Prepared recommendations covering metadata, headings, content placement, image optimization, banner requirements, crawlability, indexing, Core Web Vitals, and other essential on-site SEO considerations.</p>
+                        </div>
+                        <div class="phase-card">
+                            <h5>Phase 6 — SEO SOP & Development Handoff</h5>
+                            <p>Created a detailed SEO implementation document/SOP and shared the recommendations with the development and client teams to ensure SEO was incorporated from the website-building stage.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-box">
+                    <h4 style="color: var(--primary); font-size: 1.3rem; margin-bottom: 1rem;">📌 Project Deliverables & Impact</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                        <div>
+                            <strong style="color: var(--text-main); display: block; margin-bottom: 0.3rem;">Keyword Coverage</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Created a structured keyword master file covering the website’s major categories and subcategories.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--text-main); display: block; margin-bottom: 0.3rem;">SEO Site Architecture</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Mapped keywords to relevant URLs and planned a scalable category and subcategory hierarchy.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--text-main); display: block; margin-bottom: 0.3rem;">Development Readiness</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Delivered SEO recommendations and an implementation SOP so the website could be developed with SEO requirements in place from the beginning.</p>
+                        </div>
+                    </div>
+                    <p style="margin-top: 2rem; font-size: 0.8rem; color: #71717a; border-top: 1px solid var(--border); padding-top: 1rem;">
+                        <em>Confidentiality Notice: Client name, website URL, keyword database, and proprietary business information have been withheld. This case study highlights the SEO research, mapping, planning, and implementation documentation completed during the initial project stage.</em>
+                    </p>
+                </div>
+            </section>
+
+            
+
+<!-- CASE STUDY 3 -->
+            <section id="case-study-3" class="case-study-section">
+                <div class="case-study-header">
+                    <span style="color: var(--primary); text-transform: uppercase; font-size: 0.85rem; font-weight: 600; letter-spacing: 1px;">Featured SEO Case Study 03</span>
+                    <h3 style="font-size: 2.2rem; margin-top: 0.5rem; color: var(--text-main);">End-to-End SEO Growth for an Interior Design Business</h3>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem;">Agency project — Client details anonymized to respect confidentiality agreements.</p>
+                    
+                    <div class="case-study-meta">
+                        <div class="meta-item"><span>Industry</span><strong>Interior Design & Home Interiors</strong></div>
+                        <div class="meta-item"><span>Project Scope</span><strong>End-to-End SEO Execution</strong></div>
+                        <div class="meta-item"><span>Target Market</span><strong>Bangalore</strong></div>
+                        <div class="meta-item"><span>My Role</span><strong>SEO Executive</strong></div>
+                        <div class="meta-item"><span>Core Focus</span><strong>Technical, On-Page, Local & Content SEO</strong></div>
+                    </div>
+                </div>
+
+                <div class="case-grid-2">
+                    <div class="case-block">
+                        <h4>🚩 The Challenge</h4>
+                        <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.95rem;">The interior design website was only partially optimized. The project required a complete SEO process to understand the business goals, identify relevant service searches, improve website targeting, and generate qualified enquiries from users searching for interior design services in and around Bangalore.</p>
+                        <p style="color: var(--text-main); font-weight: 500; margin-bottom: 0.8rem; font-size: 0.9rem;">Primary Challenges:</p>
+                        <ul>
+                            <li>Limited optimization across important service pages.</li>
+                            <li>Unclear keyword targeting for major interior design services.</li>
+                            <li>Need for stronger content and search-intent alignment.</li>
+                            <li>Technical and on-page SEO improvements across the website.</li>
+                            <li>Need to improve visibility for local and commercial searches.</li>
+                            <li>Limited organic visibility and lead-generation performance.</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-block">
+                        <h4>🚀 End-to-End SEO Strategy</h4>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem;">I handled the project from initial research and planning through implementation, monitoring, and continuous optimization, with a focus on improving relevant organic visibility and converting search demand into enquiries.</p>
+                        <h5 style="color: var(--text-main); margin-bottom: 0.8rem; font-size: 0.95rem;">Core Workstreams:</h5>
+                        <ul>
+                            <li>Business understanding, competitor research, and keyword strategy.</li>
+                            <li>Keyword mapping for service pages and supporting content.</li>
+                            <li>On-page optimization and search-intent-focused content improvements.</li>
+                            <li>Technical SEO fixes and structured data implementation.</li>
+                            <li>Internal linking, local SEO, and Google Business Profile optimization.</li>
+                            <li>Performance tracking through Google Search Console, GA4, and Microsoft Clarity.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="phases-container">
+                    <h4 style="color: var(--text-main); font-size: 1.4rem; margin-bottom: 1rem;">Execution Phases</h4>
+                    <div class="phases-grid">
+                        <div class="phase-card">
+                            <h5>Phase 1 — Business & Competitor Research</h5>
+                            <p>Understood the service offerings, target audience, locations, competitors, and search demand to establish a practical SEO roadmap.</p>
+                        </div>
+                        <div class="phase-card">
+                            <h5>Phase 2 — Keyword Research & Mapping</h5>
+                            <p>Researched and mapped commercial and informational keywords for modular kitchens, living room interiors, hospitality interiors, corporate interiors, and other relevant services.</p>
+                        </div>
+                        <div class="phase-card">
+                            <h5>Phase 3 — Technical SEO Improvements</h5>
+                            <p>Reviewed and improved crawlability, indexing, canonical signals, redirects, sitemap and robots.txt considerations, structured data, and other technical SEO elements.</p>
+                        </div>
+                        <div class="phase-card">
+                            <h5>Phase 4 — On-Page & Content Optimization</h5>
+                            <p>Optimized page titles, meta descriptions, headings, URLs, content structure, keyword placement, image elements, and service-page relevance based on search intent.</p>
+                        </div>
+                        <div class="phase-card">
+                            <h5>Phase 5 — Internal Linking & Local SEO</h5>
+                            <p>Strengthened internal linking between relevant pages, improved local search signals, and optimized Google Business Profile elements for relevant local searches.</p>
+                        </div>
+                        <div class="phase-card">
+                            <h5>Phase 6 — Monitoring & Continuous Optimization</h5>
+                            <p>Tracked clicks, impressions, CTR, rankings, organic traffic, user behaviour, and lead-related activity using Google Search Console, GA4, and Microsoft Clarity.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-box">
+                    <h4 style="color: var(--primary); font-size: 1.3rem; margin-bottom: 1rem;">📈 Results & Business Impact</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                        <div>
+                            <strong style="color: var(--text-main); display: block; margin-bottom: 0.3rem;">Organic Traffic Growth</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Achieved a strong improvement in organic traffic, with performance increasing by approximately 2x–3x during the optimization period.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--text-main); display: block; margin-bottom: 0.3rem;">Keyword Visibility</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Improved rankings for multiple high-intent service keywords, with several important terms moving from lower search-result pages to Google Page 1.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--text-main); display: block; margin-bottom: 0.3rem;">Lead Generation</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Improved organic visibility contributed to more relevant lead-form submissions and qualified enquiries, with SEO performance increasingly supporting the business development pipeline.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--text-main); display: block; margin-bottom: 0.3rem;">Blog-Driven Discovery</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Planned and optimized supporting blog content to capture informational search demand, expand keyword coverage, and create additional entry points into the service pages.</p>
+                        </div>
+                    </div>
+                    <p style="margin-top: 2rem; font-size: 0.8rem; color: #71717a; border-top: 1px solid var(--border); padding-top: 1rem;">
+                        <em>Confidentiality Notice: Client name, website URL, exact traffic figures, lead counts, and proprietary business information have been withheld. The results are presented in rounded terms to communicate the nature of the SEO impact without disclosing sensitive client data.</em>
+                    </p>
+                </div>
+            </section>
+                <!-- CONTACT SECTION -->
         <section id="contact" class="contact-section">
             <h2 class="section-title">Let's Connect</h2>
-            <p class="section-subtitle" style="margin: 0 auto;">Whether you're looking for a freelance SEO expert or a full-time professional, I'm ready to drive your next growth phase.</p>
+            <p class="section-subtitle" style="margin: 0 auto;">If you are looking for an SEO professional with hands-on agency experience, technical depth, and a data-driven approach, let's connect.</p>
             
             <div class="contact-grid">
                 <div class="contact-card">
                     <h3>Email Me</h3>
-                    <p>For project inquiries and professional opportunities.</p>
+                    <p>For professional opportunities, interviews, and SEO-related discussions.</p>
                     <a href="mailto:johnjason087@gmail.com">johnjason087@gmail.com</a>
                 </div>
                 <div class="contact-card">
                     <h3>Call Me</h3>
-                    <p>Available for direct strategy consultations.</p>
+                    <p>Open to discussing SEO roles, technical challenges, and growth strategies.</p>
                     <a href="tel:+918667597994">+91 8667597994</a>
                 </div>
             </div>
@@ -1088,6 +1203,14 @@
             document.getElementById('nav-case-link').style.color = (pageId === 'case-studies') ? 'var(--primary)' : 'var(--text-muted)';
             
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function openCaseStudy(caseId) {
+            switchPage('case-studies');
+            setTimeout(() => {
+                const target = document.getElementById(caseId);
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 120);
         }
     </script>
 </body>
